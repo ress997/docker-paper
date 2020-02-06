@@ -1,0 +1,14 @@
+version: '3'
+services:
+
+  app:
+    image: ress/paper
+    build: .
+    restart: always
+    environment:
+      - TZ=Japan
+    ports:
+      - "25565:25565"
+    volumes:
+      - ./data:/data
+
